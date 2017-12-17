@@ -3,11 +3,13 @@
     <div class="nav-wrapper purple">
       <a [routerLink]="['']" id="logo-container" class="brand-logo center">IntervYou</a>
       <ul class="right">
-        <li> <a>LOGIN</a></li>
-        <li> <a>REGISTER</a></li>
-        <li> <a >PROFILE</a></li>
-        <li> <a >LOGOUT</a></li>
+        <li><a (click)="presentAuthDialog()">LOGIN</a></li>
+        <li><a (click)="presentAuthDialog('register')">REGISTER</a></li>
+        <li><a [routerLink]="['/profile']">PROFILE</a></li>
+        <li><a>LOGOUT</a></li>
       </ul>
     </div>
   </nav>
 </div>
+
+<app-auth-dialog #authDialog></app-auth-dialog>
