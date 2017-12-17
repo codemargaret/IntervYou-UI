@@ -3,10 +3,18 @@
     <div class="nav-wrapper purple">
       <a [routerLink]="['']" id="logo-container" class="brand-logo center">IntervYou</a>
       <ul class="right">
-        <li><a (click)="presentAuthDialog()">LOGIN</a></li>
-        <li><a (click)="presentAuthDialog('register')">REGISTER</a></li>
-        <li><a [routerLink]="['/profile']">PROFILE</a></li>
-        <li><a>LOGOUT</a></li>
+        <li *ngIf="!tokenAuthService.userSignedIn()">
+          <a (click)="presentAuthDialog()">LOGIN</a>
+        </li>
+        <li *ngIf="!tokenAuthService.userSignedIn()">
+          <a (click)="presentAuthDialog('register')">REGISTER</a>
+        </li>
+        <li *ngIf="tokenAuthService.userSignedIn()">
+          <a>PROFILE</a>
+        </li>
+        <li *ngIf="tokenAuthService.userSignedIn()">
+          <a (click)="tokenAuthService.signOut()">LOGOUT</a>
+        </li>
       </ul>
     </div>
   </nav>
