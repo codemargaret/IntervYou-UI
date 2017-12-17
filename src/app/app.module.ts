@@ -10,12 +10,14 @@ import { MaterializeModule } from 'angular2-materialize';
 import { Angular2TokenService } from 'angular2-token';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AuthDialogComponent
+    AuthDialogComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
