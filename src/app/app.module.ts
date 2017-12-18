@@ -13,6 +13,7 @@ import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { AuthService } from "./services/auth.service";
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AuthService } from "./services/auth.service";
     NavbarComponent,
     AuthDialogComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
