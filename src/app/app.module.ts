@@ -14,7 +14,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { AuthService } from "./services/auth.service";
 import { ProfileComponent } from './profile/profile.component';
-import {AuthGuard} from "./guards/auth.guard";
+import { AuthGuard } from "./guards/auth.guard";
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {AuthGuard} from "./guards/auth.guard";
     AuthDialogComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
