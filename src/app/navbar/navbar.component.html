@@ -2,6 +2,9 @@
   <nav  role="navigation">
     <div class="nav-wrapper purple">
       <a [routerLink]="['']" id="logo-container" class="brand-logo center">IntervYou</a>
+      <ul class="left">
+        <li><a [routerLink]="['/questions']">QUESTIONS</a></li>
+      </ul>
       <ul class="right">
         <li *ngIf="!(authService.userSignedIn$ | async)"> <a (click)="presentAuthDialog()" >LOGIN</a></li>
         <li *ngIf="!(authService.userSignedIn$ | async)"> <a (click)="presentAuthDialog('register')">REGISTER</a></li>

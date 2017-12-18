@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { Angular2TokenService } from "angular2-token";
 import { Http } from "@angular/http";
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-question',
@@ -19,9 +21,8 @@ export class QuestionComponent implements OnInit {
         data => {
       this.questions = data.json();
     },
-    err => console.error(err),
-    () => console.log(Array.of(this.questions))
-  );
+      err => console.error(err)
+      );
     }
 
   ngOnInit() {
