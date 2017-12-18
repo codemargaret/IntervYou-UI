@@ -26,3 +26,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Acknowledgements
+_I'm indebted to A. Vatsaev for his fabulous [tutorial](https://medium.com/@avatsaev/angular-2-and-ruby-on-rails-user-authentication-fde230ddaed8) on implementing an Angular interface with a Rails API._
