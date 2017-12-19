@@ -1,0 +1,19 @@
+<h4>Submit a new question</h4>
+
+<form #f="ngForm" >
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="text"
+             type="text"
+             required
+             name='text'
+             [(ngModel)]="signUpUser.text"
+             class="validate">
+      <label for="text">Text</label>
+    </div>
+
+    <div class="col s12">
+      <button type="submit" class="waves-effect waves-light btn blue right">Submit</button>
+    </div>
+  </div>
+</form>
