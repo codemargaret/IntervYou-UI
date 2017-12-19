@@ -11,7 +11,8 @@ import { Location } from '@angular/common';
   styleUrls: ['./answer.component.sass']
 })
 export class AnswerComponent implements OnInit {
-  questions;
+  question;
+  answers;
   questionId: number = null;
 
   constructor(public authTokenService:Angular2TokenService,
@@ -19,12 +20,25 @@ export class AnswerComponent implements OnInit {
     private http: Http,
     private route: ActivatedRoute,
     private location: Location) {
-      http.get('http://localhost:3000/questions.json')
+      this.route.params.forEach((urlParameters) => {
+        this.questionId = parseInt(urlParameters['id']);
+      });
+      http.get(`http://localhost:3000/questions/${this.questionId}/answers.json`)
       .subscribe(
         data => {
-          this.questions = data.json();
+          this.answers = data.json();
       },
-        err => console.error(err)
+        err => console.error(err),
+        () => console.log(this.answers)
+      );
+
+      http.get(`http://localhost:3000/questions/${this.questionId}.json`)
+      .subscribe(
+        data => {
+          this.question = data.json();
+      },
+        err => console.error(err),
+        () => console.log(this.question)
       );
     }
 

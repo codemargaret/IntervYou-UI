@@ -11,10 +11,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./question-detail.component.sass']
 })
 export class QuestionDetailComponent implements OnInit {
-  arrays;
-  questions;
   question;
-  id;
 
   questionId: number = null;
 

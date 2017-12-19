@@ -1,1 +1,7 @@
-<p>{{questionId}}</p>
+<h3>Question: {{question.text}}</h3>
+
+<h3>Answers:</h3>
+
+<ul *ngFor="let answer of answers">
+  <li>{{answer.text}}</li>
+</ul>
