@@ -1,2 +1,7 @@
-<p>{{question.text}}</p>
-<p>Click <a>here</a> to see answers.</p>
+<h4 class="card">{{question.text}}</h4>
+<br><br>
+<h5>Answers:</h5>
+<br>
+<ul *ngFor="let answer of answers" class="card">
+  <li>{{answer.text}}</li>
+</ul>

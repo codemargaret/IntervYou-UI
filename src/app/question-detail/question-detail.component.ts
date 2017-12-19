@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 })
 export class QuestionDetailComponent implements OnInit {
   question;
+  answers;
 
   questionId: number = null;
 
@@ -23,14 +24,22 @@ export class QuestionDetailComponent implements OnInit {
       this.route.params.forEach((urlParameters) => {
         this.questionId = parseInt(urlParameters['id']);
       });
-      console.log(`http://localhost:3000/questions/${this.questionId}.json`)
+
       http.get(`http://localhost:3000/questions/${this.questionId}.json`)
-      .subscribe(
-       data => {
-      this.question = data.json();
-   },
-     err => console.error(err)
-     );
+        .subscribe(
+        data => {
+          this.question = data.json();
+      },
+        err => console.error(err)
+      );
+
+     http.get(`http://localhost:3000/questions/${this.questionId}/answers.json`)
+     .subscribe(
+        data => {
+          this.answers = data.json();
+      },
+        err => console.error(err)
+      );
 
     }
 
