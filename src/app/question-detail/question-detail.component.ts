@@ -14,6 +14,7 @@ export class QuestionDetailComponent implements OnInit {
   arrays;
   questions;
   question;
+  id;
 
   questionId: number = null;
 
@@ -22,12 +23,14 @@ export class QuestionDetailComponent implements OnInit {
     private http: Http,
     private route: ActivatedRoute,
     private location: Location) {
+      this.route.params.forEach((urlParameters) => {
+        this.questionId = parseInt(urlParameters['id']);
+      });
+      console.log(`http://localhost:3000/questions/${this.questionId}.json`)
       http.get(`http://localhost:3000/questions/${this.questionId}.json`)
       .subscribe(
        data => {
-      this.arrays = data.json();
-      this.questions = Array.of(this.arrays);
-      this.question = (this.questions[0][this.questionId-1]);
+      this.question = data.json();
    },
      err => console.error(err),
      () => console.log(this.question)
