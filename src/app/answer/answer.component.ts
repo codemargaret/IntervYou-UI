@@ -37,8 +37,7 @@ export class AnswerComponent implements OnInit {
         data => {
           this.question = data.json();
       },
-        err => console.error(err),
-        () => console.log(this.question)
+        err => console.error(err)
       );
     }
 
