@@ -19,6 +19,7 @@ import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import { QuestionDetailComponent } from './question-detail/question-detail.component';
 import { NewQuestionComponent } from './new-question/new-question.component';
+import { WebApiObservableService } from "./services/web-api-observable.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { NewQuestionComponent } from './new-question/new-question.component';
     AppRoutingModule,
     MaterializeModule
   ],
-  providers: [ Angular2TokenService, AuthService, AuthGuard ],
+  providers: [ Angular2TokenService, AuthService, AuthGuard, WebApiObservableService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
