@@ -44,9 +44,7 @@ export class QuestionDetailComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.questionId = parseInt(urlParameters['id']);
-    });
+    
   }
 
 }
