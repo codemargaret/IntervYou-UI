@@ -18,6 +18,7 @@ import { AuthGuard } from "./guards/auth.guard";
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import { QuestionDetailComponent } from './question-detail/question-detail.component';
+import { NewQuestionComponent } from './new-question/new-question.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { QuestionDetailComponent } from './question-detail/question-detail.compo
     ProfileComponent,
     QuestionComponent,
     AnswerComponent,
-    QuestionDetailComponent
+    QuestionDetailComponent,
+    NewQuestionComponent
   ],
   imports: [
     BrowserModule,
