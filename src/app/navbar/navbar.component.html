@@ -4,7 +4,6 @@
       <a [routerLink]="['']" id="logo-container" class="brand-logo center">IntervYou</a>
       <ul class="left">
         <li><a [routerLink]="['/questions']">QUESTIONS</a></li>
-        <li *ngIf="(authService.userSignedIn$ | async)"> <a>NEW QUESTION</a></li>
       </ul>
       <ul class="right">
         <li *ngIf="!(authService.userSignedIn$ | async)"> <a (click)="presentAuthDialog()" >LOGIN</a></li>

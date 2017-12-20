@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthDialogComponent } from "../auth-dialog/auth-dialog.component";
 import { AuthService } from "../services/auth.service";
 import { Router } from "@angular/router";
+import { NewQuestionComponent } from '../new-question/new-question.component';
 
 @Component({
   selector: 'app-navbar',
@@ -23,5 +24,9 @@ export class NavbarComponent implements OnInit {
 
   presentAuthDialog(mode?: 'login'| 'register'){
     this.authDialog.openDialog(mode);
+  }
+
+  presentNewQuestionForm(){
+    this.router.navigate(['/questions/new']);
   }
 }
