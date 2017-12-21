@@ -20,6 +20,7 @@ import { AnswerComponent } from './answer/answer.component';
 import { QuestionDetailComponent } from './question-detail/question-detail.component';
 import { NewQuestionComponent } from './new-question/new-question.component';
 import { WebApiObservableService } from "./services/web-api-observable.service";
+import { NewAnswerComponent } from './new-answer/new-answer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { WebApiObservableService } from "./services/web-api-observable.service";
     QuestionComponent,
     AnswerComponent,
     QuestionDetailComponent,
-    NewQuestionComponent
+    NewQuestionComponent,
+    NewAnswerComponent
   ],
   imports: [
     BrowserModule,
