@@ -4,6 +4,7 @@ import { Angular2TokenService } from "angular2-token";
 import { Http } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-question',

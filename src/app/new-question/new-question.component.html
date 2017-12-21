@@ -3,17 +3,16 @@
 <form #f="ngForm" >
   <div class="row">
     <div class="input-field col s12">
-      <input id="text"
+      <input #text
              type="text"
              required
              name='text'
-             [(ngModel)]="signUpUser.text"
              class="validate">
       <label for="text">Text</label>
     </div>
 
     <div class="col s12">
-      <button type="submit" class="waves-effect waves-light btn blue right">Submit</button>
+      <button (click)='submitQuestion(text.value)' type="submit" class="waves-effect waves-light btn blue right">Submit</button>
     </div>
   </div>
 </form>
