@@ -3,7 +3,6 @@ import { Router } from "@angular/router";
 import { Angular2TokenService } from "angular2-token";
 import { Http } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-question-detail',
@@ -19,8 +18,7 @@ export class QuestionDetailComponent implements OnInit {
   constructor(public authTokenService:Angular2TokenService,
     public router:Router,
     private http: Http,
-    private route: ActivatedRoute,
-    private location: Location) {
+    private route: ActivatedRoute) {
       this.route.params.forEach((urlParameters) => {
         this.questionId = parseInt(urlParameters['id']);
       });
