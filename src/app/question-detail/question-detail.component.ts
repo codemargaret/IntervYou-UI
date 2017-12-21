@@ -24,6 +24,7 @@ export class QuestionDetailComponent implements OnInit {
       this.route.params.forEach((urlParameters) => {
         this.questionId = parseInt(urlParameters['id']);
       });
+      console.log(this.questionId);
 
       http.get(`http://localhost:3000/questions/${this.questionId}.json`)
         .subscribe(
@@ -44,7 +45,7 @@ export class QuestionDetailComponent implements OnInit {
     }
 
   ngOnInit() {
-    
+
   }
 
 }
