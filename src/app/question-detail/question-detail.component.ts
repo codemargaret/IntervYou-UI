@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { Angular2TokenService } from "angular2-token";
 import { Http } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
+import { NewAnswerComponent } from '../new-answer/new-answer.component';
 
 @Component({
   selector: 'app-question-detail',
