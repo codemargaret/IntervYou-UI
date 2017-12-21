@@ -46,6 +46,7 @@ _Run the following commands in Terminal:_
 ## Known Bugs
 * _User authentication is not required to post questions._
 * _A user can't navigate to an individual question page by clicking on the question, although the pages can be accessed by entering the address /questions/:id in the browser._
+* _Refresh is required to see new questions and answered that are posted._
 
 # Angular Info
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
