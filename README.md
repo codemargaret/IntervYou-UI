@@ -16,10 +16,11 @@ _As a user, I want to..._
 * _Register for an account._
 * _Login to my account and see my profile._
 * _Write questions._
+* _Write answers to questions._
 
 ## Future Features
 _As a user, I want to..._
-* _Write answers to questions._
+* _Have a profile with my name and questions and answers I've posted._
 * _Search questions by language._
 * _Upvote questions I like._
 * _Upvote answers I like._
