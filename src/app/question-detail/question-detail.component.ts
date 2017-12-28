@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
-import { Angular2TokenService } from "angular2-token";
 import { Http } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { NewAnswerComponent } from '../new-answer/new-answer.component';
@@ -16,8 +14,7 @@ export class QuestionDetailComponent implements OnInit {
 
   questionId: number = null;
 
-  constructor(public authTokenService:Angular2TokenService,
-    public router:Router,
+  constructor(
     private http: Http,
     private route: ActivatedRoute) {
       this.route.params.forEach((urlParameters) => {
@@ -25,7 +22,7 @@ export class QuestionDetailComponent implements OnInit {
       });
       console.log(this.questionId);
 
-      http.get(`http://localhost:3000/questions/${this.questionId}.json`)
+      http.get(`http://localhost:3000/questions/${this.questionId}`)
         .subscribe(
         data => {
           this.question = data.json();
@@ -33,7 +30,7 @@ export class QuestionDetailComponent implements OnInit {
         err => console.error(err)
       );
 
-     http.get(`http://localhost:3000/questions/${this.questionId}/answers.json`)
+     http.get(`http://localhost:3000/questions/${this.questionId}/answers`)
      .subscribe(
         data => {
           this.answers = data.json();
