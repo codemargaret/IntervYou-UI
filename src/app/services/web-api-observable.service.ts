@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { NewQuestion } from '../new-question.model';
+import { Angular2TokenService } from "angular2-token";
 
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
@@ -17,24 +18,14 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class WebApiObservableService {
   questions: Observable<any>;
-  headers: Headers;
-  options: RequestOptions;
 
-  constructor(private http: Http) {
-    this.headers = new Headers({'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9'});
-
-    this.questions = this.http.get('http://localhost:3000/questions');
-
+  constructor(private questionService: Angular2TokenService) {
+    this.questions = this.questionService.get('questions');
   }
 
   addQuestion(newQuestion:NewQuestion) {
-        console.log(newQuestion);
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-    let x = this.http.post('http://localhost:3000/questions',newQuestion, options);
-    x.subscribe(response =>{
-      console.log(response);
-    })
+    console.log(newQuestion);
+    this.questionService.post('questions', newQuestion);
   }
 
 }
