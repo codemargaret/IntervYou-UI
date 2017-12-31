@@ -21,17 +21,17 @@ export class AnswerService {
   answers: Observable<any>;
   questionId: number = null;
 
-  constructor(private http: Angular2TokenService, private route: ActivatedRoute) {
+  constructor(private answerService: Angular2TokenService, private route: ActivatedRoute) {
     this.route.params.forEach((urlParameters) => {
       this.questionId = parseInt(urlParameters['id']);
     });
 
-    this.answers = this.http.get(`questions/${this.questionId}/answers.json`)
+    this.answers = this.answerService.get(`questions/${this.questionId}/answers`)
   }
 
   addAnswer(newAnswer:NewAnswer) {
     console.log(newAnswer);
-    this.http.post(`questions/${this.questionId}/answers`, newAnswer);
+    this.answerService.post(`questions/${this.questionId}/answers`, newAnswer);
   }
 
 }
