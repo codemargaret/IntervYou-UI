@@ -22,6 +22,7 @@ import { NewQuestionComponent } from './new-question/new-question.component';
 import { WebApiObservableService } from "./services/web-api-observable.service";
 import { NewAnswerComponent } from './new-answer/new-answer.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     QuestionDetailComponent,
     NewQuestionComponent,
     NewAnswerComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
