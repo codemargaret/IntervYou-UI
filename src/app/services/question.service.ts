@@ -22,9 +22,13 @@ export class QuestionService {
 
   questionId: number = null;
 
-  constructor(private questionService: Angular2TokenService) {
+  constructor(private questionService: Angular2TokenService, private route: ActivatedRoute) {
 
     this.questions = this.questionService.get('questions');
+
+    this.route.params.forEach((urlParameters) => {
+      this.questionId = parseInt(urlParameters['id']);
+    });
 
   }
 
@@ -35,7 +39,7 @@ export class QuestionService {
 
   editQuestion(questionToEdit:NewQuestion) {
     console.log(questionToEdit);
-    
+
     this.questionService.patch(`questions/${this.questionId}`, questionToEdit);
   }
 
