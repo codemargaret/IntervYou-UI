@@ -1,0 +1,20 @@
+<div id="edit-q-border">
+  <h4>Edit this question</h4>
+
+  <form #f="ngForm" >
+    <div class="row">
+      <div class="input-field col s12">
+        <input #text
+               type="text"
+               required
+               name='text'
+               class="validate">
+        <label for="text">New Text</label>
+      </div>
+
+      <div class="col s12">
+        <button (click)='updateQuestion(text.value)' type="submit" class="waves-effect waves-light btn purple right">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

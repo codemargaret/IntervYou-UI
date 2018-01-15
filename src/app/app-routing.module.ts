@@ -5,10 +5,12 @@ import { AuthGuard } from "./guards/auth.guard";
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import { QuestionDetailComponent } from './question-detail/question-detail.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent,
     children: []
   },
   {

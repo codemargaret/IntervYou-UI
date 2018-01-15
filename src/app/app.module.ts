@@ -19,9 +19,11 @@ import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import { QuestionDetailComponent } from './question-detail/question-detail.component';
 import { NewQuestionComponent } from './new-question/new-question.component';
-import { WebApiObservableService } from "./services/web-api-observable.service";
+import { QuestionService } from "./services/question.service";
 import { NewAnswerComponent } from './new-answer/new-answer.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { EditQuestionComponent } from './edit-question/edit-question.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { FooterComponent } from './footer/footer.component';
     QuestionDetailComponent,
     NewQuestionComponent,
     NewAnswerComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    EditQuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     MaterializeModule
   ],
-  providers: [ Angular2TokenService, AuthService, AuthGuard, WebApiObservableService ],
+  providers: [ Angular2TokenService, AuthService, AuthGuard, QuestionService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
