@@ -33,14 +33,16 @@ export class QuestionService {
   }
 
   addQuestion(newQuestion:NewQuestion) {
-    console.log(newQuestion);
     this.questionService.post('questions', newQuestion);
   }
 
   editQuestion(questionToEdit:NewQuestion) {
-    console.log(questionToEdit);
-
     this.questionService.patch(`questions/${this.questionId}`, questionToEdit);
+  }
+
+  destroyQuestion() {
+
+    this.questionService.delete(`questions/${this.questionId}`);
   }
 
 }

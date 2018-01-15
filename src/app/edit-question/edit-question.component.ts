@@ -30,4 +30,8 @@ export class EditQuestionComponent implements OnInit {
     this.questionService.editQuestion(questionToUpdate);
   }
 
+  deleteQuestion() {
+    this.questionService.destroyQuestion();
+  }
+
 }
