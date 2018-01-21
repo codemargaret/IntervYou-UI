@@ -1,3 +1,24 @@
-<p>
-  edit-answer works!
-</p>
+<div id="edit-a-border">
+  <h4>Edit this answer</h4>
+
+  <form #f="ngForm" >
+    <div class="row">
+      <div class="input-field col s12">
+        <input #text
+               type="text"
+               required
+               name='text'
+               class="validate">
+        <label for="text">New Text</label>
+      </div>
+
+      <div class="col s12">
+        <button (click)='updateAnswer(text.value)' type="submit" class="waves-effect waves-light btn purple right">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <form #f="ngForm">
+    <button (click)='deleteAnswer()' type="submit" class="waves-effect waves-light btn purple right">Delete</button>
+  </form>
+</div>
