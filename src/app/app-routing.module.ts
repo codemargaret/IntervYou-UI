@@ -27,7 +27,7 @@ const routes: Routes = [
     component: QuestionDetailComponent
   },
   {
-    path: 'questions/:id/answers',
+    path: 'questions/:question_id/answers/:id',
     component: AnswerComponent
   }
 ];

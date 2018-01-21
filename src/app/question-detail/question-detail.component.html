@@ -6,7 +6,7 @@
 <h5>Answers:</h5>
 <br>
 <ul *ngFor="let answer of answers" class="card">
-  <li>{{answer.text}}</li>
+  <li><a href="/questions/{{question.id}}/answers/{{answer.id}}">{{answer.text}}</a></li>
 </ul>
 
 <app-new-answer></app-new-answer>

@@ -12,8 +12,9 @@ import { Location } from '@angular/common';
 })
 export class AnswerComponent implements OnInit {
   question;
-  answers;
+  answer;
   questionId: number = null;
+  answerId: number = null;
 
   constructor(public authTokenService:Angular2TokenService,
     public router:Router,
@@ -21,13 +22,17 @@ export class AnswerComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location) {
       this.route.params.forEach((urlParameters) => {
-        this.questionId = parseInt(urlParameters['id']);
+        this.questionId = parseInt(urlParameters['question_id']);
       });
-      
-      http.get(`http://localhost:3000/questions/${this.questionId}/answers.json`)
+
+      this.route.params.forEach((urlParameters) => {
+        this.answerId = parseInt(urlParameters['id']);
+      });
+
+      http.get(`http://localhost:3000/questions/${this.questionId}/answers/${this.answerId}.json`)
       .subscribe(
         data => {
-          this.answers = data.json();
+          this.answer = data.json();
       },
         err => console.error(err)
       );
@@ -43,7 +48,13 @@ export class AnswerComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.questionId = parseInt(urlParameters['id']);
+      this.questionId = parseInt(urlParameters['question_id']);
+      console.log(this.questionId);
+    });
+
+    this.route.params.forEach((urlParameters) => {
+      this.answerId = parseInt(urlParameters['id']);
+      console.log(this.answerId);
     });
   }
 
