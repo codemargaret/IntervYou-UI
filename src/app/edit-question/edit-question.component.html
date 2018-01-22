@@ -1,24 +1,17 @@
 <div id="edit-q-border">
-  <h4>Edit this question</h4>
-
-  <form #f="ngForm" >
-    <div class="row">
-      <div class="input-field col s12">
-        <input #text
-               type="text"
-               required
-               name='text'
-               class="validate">
-        <label for="text">New Text</label>
-      </div>
-
-      <div class="col s12">
-        <button (click)='updateQuestion(text.value)' type="submit" class="waves-effect waves-light btn purple right">Submit</button>
-      </div>
+  <h5>Edit this question</h5>
+  <div class="row">
+    <div class="input-field col s12">
+      <input #text
+             type="text"
+             required
+             name='text'
+             class="validate">
+      <label for="text">New Text</label>
     </div>
-  </form>
 
-  <form #f="ngForm">
-    <button (click)='deleteQuestion()' type="submit" class="waves-effect waves-light btn purple right">Delete</button>
-  </form>
+    <button (click)='updateQuestion(text.value)' type="submit" class="waves-effect waves-light btn purple left">Submit Changes</button>
+
+    <button (click)='deleteQuestion()' type="submit" class="waves-effect waves-light btn purple right">Delete This Question</button>
+  </div>
 </div>
