@@ -1,0 +1,17 @@
+<div id="edit-a-border">
+  <h5>Edit this answer</h5>
+    <div class="row">
+      <div class="input-field col s12">
+        <input #text
+               type="text"
+               required
+               name='text'
+               class="validate">
+        <label for="text">New Text</label>
+      </div>
+
+    <button (click)='updateAnswer(text.value)' type="submit" class="waves-effect waves-light btn purple left">Submit Changes</button>
+
+    <button (click)='deleteAnswer()' type="submit" class="waves-effect waves-light btn purple right">Delete This Answer</button>
+  </div>
+</div>

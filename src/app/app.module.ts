@@ -24,6 +24,7 @@ import { NewAnswerComponent } from './new-answer/new-answer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { EditQuestionComponent } from './edit-question/edit-question.component';
+import { EditAnswerComponent } from './edit-answer/edit-answer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { EditQuestionComponent } from './edit-question/edit-question.component';
     NewAnswerComponent,
     FooterComponent,
     HomeComponent,
-    EditQuestionComponent
+    EditQuestionComponent,
+    EditAnswerComponent
   ],
   imports: [
     BrowserModule,
