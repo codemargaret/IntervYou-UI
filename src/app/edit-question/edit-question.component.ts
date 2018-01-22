@@ -26,12 +26,10 @@ export class EditQuestionComponent implements OnInit {
 
   updateQuestion(text: string) {
     var questionToUpdate: NewQuestion = new NewQuestion(text);
-
     this.questionService.editQuestion(questionToUpdate);
   }
 
   deleteQuestion() {
     this.questionService.destroyQuestion();
   }
-
 }

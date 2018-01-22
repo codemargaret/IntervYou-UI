@@ -1,20 +1,15 @@
 <div id="new-a-border">
-  <h4>Submit an answer to this question</h4>
-
-  <form #f="ngForm" >
-    <div class="row">
-      <div class="input-field col s12">
-        <input #text
-               type="text"
-               required
-               name='text'
-               class="validate">
-        <label for="text">Text</label>
-      </div>
-
-      <div class="col s12">
-        <button (click)='submitAnswer(text.value)' type="submit" class="waves-effect waves-light btn purple right">Submit</button>
-      </div>
+  <h5>Submit an answer to this question</h5>
+  <div class="row">
+    <div class="input-field col s12">
+      <input #text
+             type="text"
+             required
+             name='text'
+             class="validate">
+      <label for="text">Text</label>
     </div>
-  </form>
+
+    <button (click)='submitAnswer(text.value)' type="submit" class="waves-effect waves-light btn purple left">Submit Your Answer</button>
+  </div>
 </div>
