@@ -34,6 +34,8 @@ _As a user, I want to..._
 * _Earn points for my contributions._
 
 ## Setup/Installation Requirements
+* _This project will soon available to view live [here](https://polar-refuge-84222.herokuapp.com/)._
+
 _Complete the setup steps for the API outlined in [this repository](https://github.com/codemargaret/IntervYou.git)._
 _Run the following commands in Terminal:_
 
