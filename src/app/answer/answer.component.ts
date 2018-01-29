@@ -29,7 +29,7 @@ export class AnswerComponent implements OnInit {
         this.answerId = parseInt(urlParameters['id']);
       });
 
-      http.get(`https://nameless-oasis-87770.herokuapp.com//questions/${this.questionId}/answers/${this.answerId}.json`)
+      http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}/answers/${this.answerId}.json`)
       .subscribe(
         data => {
           this.answer = data.json();

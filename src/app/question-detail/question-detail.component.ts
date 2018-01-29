@@ -21,7 +21,7 @@ export class QuestionDetailComponent implements OnInit {
         this.questionId = parseInt(urlParameters['id']);
       });
 
-      http.get(`https://nameless-oasis-87770.herokuapp.com//questions/${this.questionId}`)
+      http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}`)
         .subscribe(
         data => {
           this.question = data.json();
