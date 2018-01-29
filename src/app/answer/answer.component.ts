@@ -29,7 +29,7 @@ export class AnswerComponent implements OnInit {
         this.answerId = parseInt(urlParameters['id']);
       });
 
-      http.get(`http://localhost:3000/questions/${this.questionId}/answers/${this.answerId}.json`)
+      http.get(`https://nameless-oasis-87770.herokuapp.com//questions/${this.questionId}/answers/${this.answerId}.json`)
       .subscribe(
         data => {
           this.answer = data.json();
@@ -37,7 +37,7 @@ export class AnswerComponent implements OnInit {
         err => console.error(err)
       );
 
-      http.get(`http://localhost:3000/questions/${this.questionId}.json`)
+      http.get(`https://nameless-oasis-87770.herokuapp.com//questions/${this.questionId}.json`)
       .subscribe(
         data => {
           this.question = data.json();

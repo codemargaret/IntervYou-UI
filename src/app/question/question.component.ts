@@ -11,7 +11,7 @@ export class QuestionComponent implements OnInit {
 
   constructor(
     private http: Http) {
-      http.get('http://localhost:3000/questions')
+      http.get('https://nameless-oasis-87770.herokuapp.com//questions')
       .subscribe(
         data => {
       this.questions = data.json();
