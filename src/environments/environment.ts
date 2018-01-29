@@ -6,6 +6,6 @@
 export const environment = {
   production: false,
   token_auth_config: {
-    apiBase: 'https://nameless-oasis-87770.herokuapp.com/'
+    apiBase: 'https://nameless-oasis-87770.herokuapp.com'
   }
 };
