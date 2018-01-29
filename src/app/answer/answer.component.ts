@@ -37,7 +37,7 @@ export class AnswerComponent implements OnInit {
         err => console.error(err)
       );
 
-      http.get(`https://nameless-oasis-87770.herokuapp.com//questions/${this.questionId}.json`)
+      http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}.json`)
       .subscribe(
         data => {
           this.question = data.json();
