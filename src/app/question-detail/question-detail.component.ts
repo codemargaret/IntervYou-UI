@@ -9,6 +9,7 @@ import { NewAnswerComponent } from '../new-answer/new-answer.component';
   styleUrls: ['./question-detail.component.sass']
 })
 export class QuestionDetailComponent implements OnInit {
+  questions;
   question;
   answers;
 
@@ -20,6 +21,14 @@ export class QuestionDetailComponent implements OnInit {
       this.route.params.forEach((urlParameters) => {
         this.questionId = parseInt(urlParameters['id']);
       });
+
+      http.get('https://nameless-oasis-87770.herokuapp.com/questions')
+      .subscribe(
+        data => {
+      this.questions = data.json();
+    },
+      err => console.error(err)
+      );
 
       http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}`)
         .subscribe(
@@ -40,7 +49,9 @@ export class QuestionDetailComponent implements OnInit {
     }
 
   ngOnInit() {
-
+    this.route.params.forEach((urlParameters) => {
+      this.questionId = parseInt(urlParameters['id']);
+    });
   }
 
 }
