@@ -24,12 +24,11 @@ export class QuestionService {
 
   constructor(private questionService: Angular2TokenService, private route: ActivatedRoute) {
 
-    this.questions = this.questionService.get('questions');
+    this.questions = this.questionService.get(`https://nameless-oasis-87770.herokuapp.com/questions`);
 
     this.route.params.forEach((urlParameters) => {
       this.questionId = parseInt(urlParameters['id']);
     });
-
   }
 
   addQuestion(newQuestion:NewQuestion) {
@@ -41,8 +40,6 @@ export class QuestionService {
   }
 
   destroyQuestion() {
-
     this.questionService.delete(`questions/${this.questionId}`);
   }
-
 }
