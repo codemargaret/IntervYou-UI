@@ -24,7 +24,7 @@ export class QuestionService {
 
   constructor(private questionService: Angular2TokenService, private route: ActivatedRoute) {
 
-    this.questions = this.questionService.get(`https://nameless-oasis-87770.herokuapp.com/questions`);
+    this.questions = this.questionService.get('questions');
 
     this.route.params.forEach((urlParameters) => {
       this.questionId = parseInt(urlParameters['id']);
