@@ -3,7 +3,7 @@
 <br>
 <h5>Answers:</h5>
 <ul *ngFor="let answer of answers" class="card">
-  <li><a href="{{question.id}}/answers/{{answer.id}}">{{answer.text}}</a></li>
+  <li><a [routerLink]="['/questions', question.id, 'answers', answer.id]">{{answer.text}}</a></li>
 </ul>
 <br>
 <app-new-answer></app-new-answer>

@@ -1,4 +1,4 @@
-<h5>Question: {{question.text}}</h5>
+<h5>Question:<a [routerLink]="['/questions', question.id]"> {{question.text}}</a></h5>
 
 <h5>Answer:</h5>
 <p>{{answer.text}}</p>
