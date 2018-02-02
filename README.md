@@ -1,6 +1,6 @@
 # _IntervYou Angular User Interface_
 
-#### _A website that allows a user to practice technical interview questions, 12.21.2017_
+#### _A website that allows a user to practice technical interview questions, 02.02.2017_
 
 #### By _**Margaret Berry**_
 
@@ -34,10 +34,10 @@ _As a user, I want to..._
 * _Earn points for my contributions._
 
 ## Setup/Installation Requirements
-* _This project will soon available to view live [here](https://interv-you.herokuapp.com/)._
+* _This application is live [here](https://interv-you.herokuapp.com/)._
 
-_Complete the setup steps for the API outlined in [this repository](https://github.com/codemargaret/IntervYou.git)._
-_Run the following commands in Terminal:_
+_To run the app locally, first complete the setup steps for the API outlined in [this repository](https://github.com/codemargaret/IntervYou.git)._
+_Then run the following commands in Terminal:_
 
 1. `$ git clone` [this repository](https://github.com/codemargaret/IntervYou-UI.git)
 2. `$ cd IntervYou-UI`
