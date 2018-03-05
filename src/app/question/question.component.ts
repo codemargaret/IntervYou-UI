@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from "@angular/http";
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-question',
@@ -8,10 +9,12 @@ import { Http } from "@angular/http";
 })
 export class QuestionComponent implements OnInit {
   questions;
+  apiUrl;
 
   constructor(
     private http: Http) {
-      http.get('https://nameless-oasis-87770.herokuapp.com/questions')
+      this.apiUrl = environment.apiUrl;
+      http.get(`${this.apiUrl}/questions`)
       .subscribe(
         data => {
       this.questions = data.json();

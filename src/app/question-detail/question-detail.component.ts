@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { NewAnswerComponent } from '../new-answer/new-answer.component';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-question-detail',
@@ -12,6 +13,7 @@ export class QuestionDetailComponent implements OnInit {
   questions;
   question;
   answers;
+  apiUrl;
 
   questionId: number = null;
 
@@ -22,7 +24,8 @@ export class QuestionDetailComponent implements OnInit {
         this.questionId = parseInt(urlParameters['id']);
       });
 
-      http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}`)
+      this.apiUrl = environment.apiUrl;
+      http.get(`${this.apiUrl}/questions/${this.questionId}`)
         .subscribe(
         data => {
           this.question = data.json();
@@ -30,7 +33,7 @@ export class QuestionDetailComponent implements OnInit {
         err => console.error(err)
       );
 
-     http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}/answers`)
+     http.get(`${this.apiUrl}/questions/${this.questionId}/answers`)
      .subscribe(
         data => {
           this.answers = data.json();
