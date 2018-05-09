@@ -4,6 +4,7 @@ import { Angular2TokenService } from "angular2-token";
 import { Http } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-answer',
@@ -13,6 +14,7 @@ import { Location } from '@angular/common';
 export class AnswerComponent implements OnInit {
   question;
   answer;
+  apiUrl;
   questionId: number = null;
   answerId: number = null;
 
@@ -29,7 +31,8 @@ export class AnswerComponent implements OnInit {
         this.answerId = parseInt(urlParameters['id']);
       });
 
-      http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}/answers/${this.answerId}.json`)
+      this.apiUrl = environment.apiUrl;
+      http.get(`${this.apiUrl}/questions/${this.questionId}/answers/${this.answerId}.json`)
       .subscribe(
         data => {
           this.answer = data.json();
@@ -37,7 +40,7 @@ export class AnswerComponent implements OnInit {
         err => console.error(err)
       );
 
-      http.get(`https://nameless-oasis-87770.herokuapp.com/questions/${this.questionId}.json`)
+      http.get(`${this.apiUrl}/questions/${this.questionId}.json`)
       .subscribe(
         data => {
           this.question = data.json();

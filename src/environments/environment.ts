@@ -5,7 +5,8 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost:3000',
   token_auth_config: {
-    apiBase: 'https://nameless-oasis-87770.herokuapp.com'
+    apiBase: 'http://localhost:3000'
   }
 };
