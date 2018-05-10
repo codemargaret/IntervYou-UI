@@ -1,4 +1,5 @@
 'use strict'
+import { environment } from '../../environments/environment';
 /**
  * New Relic agent configuration.
  *
@@ -13,7 +14,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: LICENSE_KEY,
+  license_key: environment.newrelic_license_key,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing

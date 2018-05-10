@@ -8,5 +8,6 @@ export const environment = {
   apiUrl: 'http://localhost:3000',
   token_auth_config: {
     apiBase: 'http://localhost:3000'
-  }
+  },
+  newrelic_license_key: '75430d414fabc082aaac03d375c5757350013d0f'
 };
